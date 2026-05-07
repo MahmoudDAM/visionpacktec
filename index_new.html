@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>VisionPack — Co-Packing & Smart Packaging | About</title>
+    <meta name="description" content="VisionPack: Expert co-packing services, custom pouch solutions, and contract packaging. Based in 10th of Ramadan City, Egypt. Led by Eng. Mohamed Mahdy.">
+    <meta name="keywords" content="co-packing, contract packaging, stand-up pouches, stick pack, flow wrap, quad seal, bulk filling, VisionPack, about">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Updated Logo Styles to match image_ecc816.png */
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            line-height: 1;
+        }
+        .logo-top {
+            display: flex;
+            align-items: baseline;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
+        .logo-vision {
+            color: #a81c2e; /* Deep Red from image */
+        }
+        .logo-pack {
+            color: #1a365d; /* Dark Blue from image */
+        }
+        .logo-bottom {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1a365d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 2px solid #1a365d; /* The line in the logo */
+            margin-top: 2px;
+            padding-top: 4px;
+            display: block;
+            width: 100%;
+            text-align: justify;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 90px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #a81c2e;
+        }
+        .btn-outline {
+            border: 2px solid #a81c2e;
+            background: transparent;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #a81c2e;
+        }
+        .btn-outline:hover {
+            background: #a81c2e;
+            color: white;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: #0a1f33;
+            border-radius: 2px;
+        }
+        .btn-primary {
+            background: #a81c2e;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #8e1827;
+            transform: translateY(-2px);
+        }
+
+        /* Theme Styling */
+        .hero {
+            background: linear-gradient(135deg, #fffafa 0%, #ffffff 100%);
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid #edeff2;
+        }
+        .hero-content h1 span {
+            color: #a81c2e;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #a81c2e;
+        }
+        .founder-details .title {
+            color: #a81c2e;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .service-icon {
+            font-size: 2.4rem;
+            color: #a81c2e;
+            margin-bottom: 1rem;
+        }
+        .pouch-img {
+            background: #fdf2f2;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .pouch-img svg {
+            max-height: 100%;
+            width: auto;
+        }
+
+        /* Grid Layouts */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0a1f33;
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            color: #4a5b6e;
+            margin-bottom: 1.2rem;
+        }
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .stat {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 20px;
+            text-align: center;
+            flex: 1;
+        }
+        .founder-card {
+            background: #f8fafc;
+            border-radius: 28px;
+            padding: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .founder-avatar {
+            width: 100px;
+            height: 100px;
+            background: #0a1f33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            color: #a81c2e;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+        }
+        .pouch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pouch-card {
+            background: #fff;
+            border-radius: 28px;
+            border: 1px solid #eef2f8;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .pouch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .pouch-content {
+            padding: 1.5rem;
+        }
+        .pouch-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #1a365d;
+        }
+        .pouch-content p {
+            font-size: 0.95rem;
+            color: #4a5b6e;
+            margin-bottom: 1rem;
+        }
+        .ideal-list {
+            margin-top: 12px;
+            list-style: none;
+        }
+        .ideal-list li {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1a365d;
+            margin: 4px 6px 4px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin: 3.5rem 0 2rem;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0a1f33;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background: #0a1f33;
+            border-radius: 32px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+            margin: 3rem 0;
+        }
+        .btn-light {
+            background: white;
+            color: #0a1f33;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 800px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.3s;
+                z-index: 200;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .hamburger {
+                display: flex;
+                z-index: 201;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-top">
+                    <span class="logo-vision">Vision</span><span class="logo-pack">Pack</span>
+                </div>
+                <span class="logo-bottom">INTELLIGENT PACKAGING</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pouch-solutions">Pouches</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="mailto:info@visionpacktec.com" class="btn-outline">Quote</a></li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Co-Packing services <br> <span>Big impact</span> starts with smart packaging</h1>
+                    <p>Expert solutions for all your packaging needs, from hand-packing to fully automated industrial lines.</p>
+                    <a href="#contact" class="btn-primary">Start your project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <div class="container" id="about">
+            <div class="section-header">
+                <h2>About VisionPack</h2>
+                <p>Specialized co‑packing & flexible packaging — 10th of Ramadan City</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Quality‑driven contract packaging partner</h3>
+                    <p>VisionPack is a specialized co-packing company providing flexible packaging solutions. We offer high‑quality pouch filling tailored to different product and branding needs.</p>
+                    <div class="stats">
+                        <div class="stat"><div class="stat-number">15+</div><div>Years exp.</div></div>
+                        <div class="stat"><div class="stat-number">50+</div><div>Brands</div></div>
+                    </div>
+                </div>
+                <div>
+                    <svg viewBox="0 0 500 300" style="width:100%; height:auto; border-radius:24px; background:#f0f4f8;">
+                        <rect x="100" y="80" width="300" height="150" fill="#a81c2e" opacity="0.1" />
+                        <path d="M150 150 L250 100 L350 150 L350 220 L150 220 Z" fill="#1a365d" opacity="0.2" />
+                        <text x="50%" y="55%" text-anchor="middle" font-weight="bold" fill="#1a365d">Industrial Hub C6</text>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- CEO Section -->
+            <div class="founder-card">
+                <div class="founder-avatar"><i class="fas fa-user-tie"></i></div>
+                <div class="founder-details">
+                    <h3>Eng. Mohamed Mahdy</h3>
+                    <span class="title">Founder & CEO – VisionPack Intelligent Packaging</span>
+                    <p>Leading VisionPack’s mission to deliver premium contract packaging services across Egypt and MENA with advanced HFFS/VFFS lines and rigorous quality systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="container" id="services">
+            <div class="section-header">
+                <h2>Our Packaging Expertise</h2>
+                <p>End-to-end solutions for retail and industrial packaging</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hand-holding-box"></i></div>
+                    <h3>Hand Packaging</h3>
+                    <p>Meticulous manual assembly for delicate items, gift sets, and promotional bundles that require a human touch.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Automated Packaging</h3>
+                    <p>High-speed HFFS and VFFS lines capable of processing thousands of units per hour with digital precision.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Bag Sizing & Die Lines</h3>
+                    <p>Technical consultation on pouch dimensions and layout to maximize shelf impact and minimize material waste.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pouch formats -->
+        <div class="container" id="pouch-solutions">
+            <div class="section-header">
+                <h2>Flexible Pouch Solutions</h2>
+                <p>Innovative formats engineered for barrier protection and consumer convenience</p>
+            </div>
+            <div class="pouch-grid">
+                <!-- Zipper Stand-up Pouch -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40 160 L60 40 L140 40 L160 160 Q100 180 40 160" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <line x1="60" y1="60" x2="140" y2="60" stroke="#1a365d" stroke-width="2" stroke-dasharray="4"/>
+                            <path d="M50 155 Q100 170 150 155" fill="none" stroke="#1a365d" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Zipper Stand-up Pouch</h3>
+                        <p>Provides excellent barrier protection and preserves freshness. These pouches stand upright on shelves, making them perfect for retail display.</p>
+                        <ul class="ideal-list"><li>Coffee</li><li>Dried Snacks</li><li>Powders</li><li>Pet Treats</li></ul>
+                    </div>
+                </div>
+
+                <!-- Stick Pack -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="85" y="30" width="30" height="140" rx="4" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <line x1="85" y1="50" x2="115" y2="50" stroke="#1a365d" stroke-width="1"/>
+                            <line x1="85" y1="150" x2="115" y2="150" stroke="#1a365d" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Stick Pack</h3>
+                        <p>A convenient, single-serve format designed for portable use and precise portion control. Ideal for on-the-go consumption.</p>
+                        <ul class="ideal-list"><li>Drink Mixes</li><li>Supplements</li><li>Instant Coffee</li><li>Sugar</li></ul>
+                    </div>
+                </div>
+
+                <!-- Pillow Pack -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 40 L150 40 L140 160 L60 160 Z" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <path d="M50 40 Q100 55 150 40" fill="none" stroke="#1a365d" stroke-width="1.5"/>
+                            <path d="M60 160 Q100 145 140 160" fill="none" stroke="#1a365d" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Pillow Pack</h3>
+                        <p>One of the most cost-effective and lightweight packaging solutions. Simple design that is easy to open and widely recognized.</p>
+                        <ul class="ideal-list"><li>Bakery</li><li>Snacks</li><li>Baked Goods</li><li>Promotional Items</li></ul>
+                    </div>
+                </div>
+
+                <!-- Quad Seal Pouch -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60 40 L140 40 L140 160 L60 160 Z" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <line x1="80" y1="40" x2="80" y2="160" stroke="#a81c2e" stroke-width="1" opacity="0.5"/>
+                            <line x1="120" y1="40" x2="120" y2="160" stroke="#a81c2e" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Quad Seal Pouch</h3>
+                        <p>Features superior stability and a premium appearance. It stands upright and offers four clean panels for branding.</p>
+                        <ul class="ideal-list"><li>Premium Coffee</li><li>Tea</li><li>Pet Food</li><li>Specialty Grains</li></ul>
+                    </div>
+                </div>
+
+                <!-- Flat-Bottom Zipper Pouch -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 160 L60 40 L140 40 L150 160 L50 160 Z" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <line x1="60" y1="65" x2="140" y2="65" stroke="#1a365d" stroke-width="2" stroke-dasharray="3"/>
+                            <rect x="50" y="150" width="100" height="15" fill="#1a365d" opacity="0.1"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Flat-Bottom Zipper Pouch</h3>
+                        <p>Combines the stability of a box with the benefits of a flexible bag. It has a flat base for maximum shelf stability.</p>
+                        <ul class="ideal-list"><li>Gourmet Coffee</li><li>Cereal</li><li>Granola</li><li>Pet Food</li></ul>
+                    </div>
+                </div>
+
+                <!-- Doypack with Fitment -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 160 L60 60 L140 60 L150 160 Q100 180 50 160" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <rect x="90" y="40" width="20" height="20" fill="#1a365d" stroke="#1a365d" stroke-width="1.5"/>
+                            <circle cx="100" cy="40" r="8" fill="#1a365d"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Doypack with Fitment</h3>
+                        <p>Designed for precise dispensing of liquids and semi-liquids. Reclosable spout ensures multiple uses and portability.</p>
+                        <ul class="ideal-list"><li>Beverages</li><li>Sauces</li><li>Baby Foods</li><li>Detergents</li></ul>
+                    </div>
+                </div>
+
+                <!-- Flow Wrap -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="70" width="120" height="60" rx="2" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <path d="M40 70 L30 100 L40 130" fill="none" stroke="#1a365d" stroke-width="1.5"/>
+                            <path d="M160 70 L170 100 L160 130" fill="none" stroke="#1a365d" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Flow Wrap</h3>
+                        <p>High-speed automation solution providing excellent visibility. Wraps tightly around the product for a slim profile.</p>
+                        <ul class="ideal-list"><li>Bakery Items</li><li>Confectionery</li><li>Soap Bars</li><li>Medical Kits</li></ul>
+                    </div>
+                </div>
+
+                <!-- Bulk Filling -->
+                <div class="pouch-card">
+                    <div class="pouch-img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 60 L150 60 L140 170 L60 170 Z" fill="#a81c2e" opacity="0.1" stroke="#a81c2e" stroke-width="2"/>
+                            <path d="M50 60 Q100 40 150 60" fill="none" stroke="#1a365d" stroke-width="2"/>
+                            <rect x="80" y="100" width="40" height="30" fill="#1a365d" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <div class="pouch-content">
+                        <h3>Bulk Filling</h3>
+                        <p>Solutions for large-format industrial containers. Efficiently packs high volumes of dry goods into bags, totes, or drums.</p>
+                        <ul class="ideal-list"><li>Powders</li><li>Granules</li><li>Grains</li><li>Industrial Ingredients</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="container">
+            <div class="cta-section">
+                <h2>Wherever your packing needs & imagination take you</h2>
+                <p>VisionPack Contract Packaging is standing by to help you bring your product to market with stand-out quality.</p>
+                <a href="#contact" class="btn-light">Talk to an expert <i class="fas fa-phone-alt"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="container" id="contact">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Reach out to our co-packing specialists in 10th of Ramadan City</p>
+            </div>
+            <div style="background:#0a1f33; padding:3rem; border-radius:28px; color:white; text-align:center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color:#a81c2e; margin-right: 10px;"></i> 10th of Ramadan City, industrial zone C6, plot 75, Egypt</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-phone-alt" style="color:#a81c2e; margin-right: 10px;"></i> +20 101 922 2211</p>
+                    <p style="font-size: 1.1rem;"><i class="fas fa-envelope" style="color:#a81c2e; margin-right: 10px;"></i> info@visionpacktec.com</p>
+                </div>
+                <a href="mailto:info@visionpacktec.com" class="btn-primary" style="background:white; color:#0a1f33;">Send an Email</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="logo">
+                        <div class="logo-top">
+                            <span class="logo-vision">Vision</span><span class="logo-pack">Pack</span>
+                        </div>
+                        <span class="logo-bottom">INTELLIGENT PACKAGING</span>
+                    </a>
+                </div>
+                <div class="copyright">
+                    © <span id="year"></span> VisionPack INTELLIGENT PACKAGING. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear();
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
